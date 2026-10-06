@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLife Plant Nursery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="topbar">🌿 Fresh Plants &nbsp; | &nbsp; Better Homes &nbsp; | &nbsp; Greener Tomorrow</div>
+
+  <header class="header">
+    <a class="logo" href="index.html">
+      <span class="logo-leaf">◒</span>
+      <span><b>GreenLife</b><small>PLANT NURSERY</small></span>
+    </a>
+    <nav>
+      <a class="active" href="#home">Home</a>
+      <a href="#plants">Plants</a>
+      <a href="#categories">Categories</a>
+      <a href="#care">Plant Care</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search search-box">
+    <input
+        id="searchInput"
+        placeholder="Search plants..."
+        autocomplete="off"
+    >
+    <span>⌕</span>
+
+    <div id="searchSuggestions" class="search-suggestions"></div>
+</div>
+      <a id="accountLink" href="login.html">♙ Login</a>
+      <button class="cart-btn" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+     
+        <div class="hero-stats">
+          <span>🌱 <b>500+</b><small>Plants</small></span>
+          <span>♙ <b>1000+</b><small>Happy Customers</small></span>
+          <span>♡ <b>100%</b><small>Healthy Plants</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="section categories-section">
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE OUR COLLECTION</p>
+        <h2>Shop by Category</h2>
+      </div>
+      <button class="category-card" onclick="location.href='category.html?category=Indoor'" style="--bg:url('images/indoor.jpg')">
+    <span>Indoor Plants <b>→</b></span>
+</button>
+
+<button class="category-card" onclick="location.href='category.html?category=Outdoor'" style="--bg:url('images/outdoor.jpg')">
+    <span>Outdoor Plants <b>→</b></span>
+</button>
+
+<button class="category-card" onclick="location.href='category.html?category=Flowering'" style="--bg:url('images/flowering.jpg')">
+    <span>Flowering Plants <b>→</b></span>
+</button>
+
+<button class="category-card" onclick="location.href='category.html?category=Medicinal & Herbs'" style="--bg:url('images/medicinal.jpg')">
+    <span>Medicinal & Herb Plants <b>→</b></span>
+</button>
+
+<button class="category-card" onclick="location.href='category.html?category=Cactus'" style="--bg:url('images/cactus.jpg')">
+    <span>Cactus & Succulents <b>→</b></span>
+</button>
+
+<button class="category-card" onclick="location.href='category.html?category=Soil'" style="--bg:url('images/soil.jpg')">
+    <span>Soil & Potting Mix <b>→</b></span>
+</button></section>
+
+    <section id="popular" class="section popular-section">
+      <div class="section-row">
+        <div>
+          <p class="eyebrow">TRENDING NOW</p>
+          <h2>Popular Plants</h2>
+        </div>
+        <a href="#plants">View All Plants →</a>
+      </div>
+      <div id="popularPlants" class="horizontal-products"></div>
+    </section>
+
+    <section id="plants" class="section plants-section">
+      <div class="section-row">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>All Plants</h2>
+        </div>
+        <div class="filters">
+          <button class="filter active" onclick="filterCategory('All')">All</button>
+          <button class="filter" onclick="filterCategory('Indoor')">Indoor</button>
+          <button class="filter" onclick="filterCategory('Outdoor')">Outdoor</button>
+          <button class="filter" onclick="filterCategory('Flowering')">Flowering</button>
+          <button class="filter" onclick="filterCategory('Medicinal & Herbs')">Medicinal & Herbs</button>
+          <button class="filter" onclick="filterCategory('Cactus')">Cactus</button>
+          <button class="filter" onclick="filterCategory('Soil')">Soil</button>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="care" class="info-band">
+      <div><strong>🌱 Healthy Plants</strong><small>Carefully selected and maintained.</small></div>
+      <div><strong>🚚 Safe Delivery</strong><small>Plants packed carefully for safe delivery.</small></div>
+      <div><strong>₹ Affordable Prices</strong><small>Quality plants at practical prices.</small></div>
+      <div><strong>♧ Plant Support</strong><small>Helpful care guidance for your plants.</small></div>
+    </section>
+
+    <section id="about" class="section about">
+      <div><div class="about-photo"></div></div>
+      <div>
+        <p class="eyebrow">ABOUT GREENLIFE</p>
+        <h2>Bring a little more green into everyday life.</h2>
+        <p>GreenLife is a simple and affordable online nursery for indoor, outdoor, flowering, medicinal and herb plants.</p>
+        <a class="btn primary" href="#plants">Explore Plants →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><b>GreenLife Plant Nursery</b><span>Healthy Plants • Affordable Prices • Greener Homes</span><span>© 2026 GreenLife</span></footer>
+
+ <!-- ================================
+     MY ACCOUNT PANEL
+================================ -->
+
+<div id="accountPanel" class="account-panel">
+
+  <div class="account-head">
+    <div>
+      <p class="eyebrow">GREENLIFE ACCOUNT</p>
+      <h2>My Account</h2>
+    </div>
+
+    <button onclick="closeAccount()">×</button>
+  </div>
+
+
+  <!-- USER INFORMATION -->
+
+  <div class="account-profile">
+
+    <div class="profile-icon">
+      👤
+    </div>
+
+    <div>
+      <h3 id="profileName">GreenLife User</h3>
+      <p id="profileEmail">email@example.com</p>
+    </div>
+
+  </div>
+
+
+  <!-- PERSONAL DETAILS -->
+
+  <div class="account-section">
+
+    <h3>Personal Details</h3>
+
+    <div class="account-detail">
+      <span>👤 Name</span>
+      <strong id="profileFullName">-</strong>
+    </div>
+
+    <div class="account-detail">
+      <span>📧 Email</span>
+      <strong id="profileEmailDetail">-</strong>
+    </div>
+
+    <div class="account-detail">
+      <span>📱 Phone</span>
+      <strong id="profilePhone">-</strong>
+    </div>
+
+  </div>
+
+
+  <!-- ACCOUNT OPTIONS -->
+
+  <div class="account-menu">
+
+    <button onclick="openCart(); closeAccount();">
+      <span>🛒</span>
+      <div>
+        <b>My Cart</b>
+        <small>
+          <span id="accountCartCount">0</span> items
+        </small>
+      </div>
+    </button>
+
+
+    <button onclick="showOrders()">
+      <span>📦</span>
+      <div>
+        <b>My Orders</b>
+        <small>View your orders</small>
+      </div>
+    </button>
+
+
+    <button onclick="showPendingOrders()">
+      <span>⏳</span>
+      <div>
+        <b>Pending Orders</b>
+        <small id="pendingOrderCount">0 pending</small>
+      </div>
+    </button>
+
+
+    <button onclick="showOrderHistory()">
+      <span>📜</span>
+      <div>
+        <b>Order History</b>
+        <small>View previous orders</small>
+      </div>
+    </button>
+
+<div id="myOrdersSection"
+ class="my-orders-section"></div>
+    <button onclick="showWishlist()">
+      <span>❤️</span>
+      <div>
+        <b>Wishlist</b>
+        <small>Your favourite plants</small>
+      </div>
+    </button>
+
+
+    <button onclick="accountSettings()">
+      <span>⚙️</span>
+      <div>
+        <b>Account Settings</b>
+        <small>Edit your information</small>
+      </div>
+    </button>
+
+  </div>
+
+
+  <!-- LOGOUT -->
+
+  <button class="logout-btn" onclick="logoutUser()">
+    🚪 Logout
+  </button>
+
+</div> <div id="cartPanel" class="cart-panel">
+    <div class="cart-head"><h3>Your Cart</h3><button onclick="closeCart()">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total">Total <strong id="cartTotal">₹0</strong></div>
+    <button class="btn primary full" onclick="checkout()">Proceed to Checkout</button>
+  </div>
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

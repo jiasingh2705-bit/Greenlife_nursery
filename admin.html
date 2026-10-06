@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>GreenLife Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <aside class="sidebar">
+        <div class="admin-logo">🌿 GreenLife<small>ADMIN PANEL</small></div>
+        <button class="side active" onclick="showPanel('dashboard')">
+          ▦ Dashboard</button
+        ><button class="side" onclick="showPanel('plants')">
+          🌱 Manage Plants</button
+        ><button class="side" onclick="showPanel('orders')">🧾 Orders</button
+        ><button class="side" onclick="showPanel('users')">👥 Customers</button
+        ><button class="side" onclick="showPanel('reports')">📊 Reports</button
+        ><button class="side" onclick="showPanel('settings')">
+          ⚙ Settings
+        </button>
+        <div class="side-bottom">
+          <a href="index.html">View Website</a
+          ><button onclick="logoutAdmin()">Logout</button>
+        </div>
+      </aside>
+      <main class="admin-main">
+        <header class="admin-header">
+          <div>
+            <h1 id="pageTitle">Dashboard</h1>
+            <p>GreenLife Nursery management</p>
+          </div>
+          <div class="admin-profile">● Admin</div>
+        </header>
+
+        <section id="dashboard" class="panel active">
+          <div id="stats" class="stats"></div>
+          <div class="dash-grid">
+            <div class="chart-card">
+              <h3>Order Status</h3>
+              <div id="orderPie" class="pie"></div>
+              <div id="orderLegend" class="legend"></div>
+            </div>
+            <div class="chart-card">
+              <h3>Plant Categories</h3>
+              <div id="catPie" class="pie"></div>
+              <div id="catLegend" class="legend"></div>
+            </div>
+            <div class="table-card">
+              <h3>Recent Orders</h3>
+              <div id="recentOrders"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="plants" class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Manage Plants</h2>
+              <p>Add, edit, delete and mark popular plants.</p>
+            </div>
+            <button class="green-btn" onclick="openPlantForm()">
+              + Add Plant
+            </button>
+          </div>
+          <div id="plantForm" class="form-card hidden">
+            <input type="hidden" id="editId" />
+            <div class="form-grid">
+              <input id="pName" placeholder="Plant name" />
+              <select id="pCategory">
+    <option value="Indoor Plants">Indoor Plants</option>
+    <option value="Outdoor Plants">Outdoor Plants</option>
+    <option value="Medicinal & Herbs">Medicinal & Herbs</option>
+    <option value="Flowering Plants">Flowering Plants</option>
+    <option value="Cactus">Cactus</option>
+    <option value="Soil">Soil</option>
+</select>
+<input
+                id="pPrice"
+                type="number"
+                placeholder="Selling price"
+              /><input
+                id="pCost"
+                type="number"
+                placeholder="Cost price"
+              /><input id="pStock" type="number" placeholder="Stock" /><input
+                id="pImage"
+                type="file"
+                accept="image/*"
+              /><textarea id="pDesc" placeholder="Description"></textarea>
+            </div>
+            <div id="preview"></div>
+            <label class="checks"
+              ><input id="pPopular" type="checkbox" /> Popular Plant
+              <input id="pActive" type="checkbox" checked /> Active</label
+            >
+            <div>
+              <button class="green-btn" onclick="savePlant()">
+                Save Plant
+              </button>
+              <button class="gray-btn" onclick="closePlantForm()">
+                Cancel
+              </button>
+            </div>
+          </div>
+          <div id="adminPlants" class="admin-plants"></div>
+        </section>
+
+        <section id="orders" class="panel">
+          <h2>Orders</h2>
+          <div id="ordersTable" class="table-card"></div>
+        </section>
+        <section id="users" class="panel">
+          <h2>Customers</h2>
+          <div id="usersTable" class="table-card"></div>
+        </section>
+        <section id="reports" class="panel">
+          <h2>Reports</h2>
+          <div class="report-grid">
+            <div class="report-card">Sales<br /><b id="reportSales">₹0</b></div>
+            <div class="report-card">
+              Orders<br /><b id="reportOrders">0</b>
+            </div>
+            <div class="report-card">
+              Customers<br /><b id="reportUsers">0</b>
+            </div>
+            <div class="report-card">
+              Stock Units<br /><b id="reportStock">0</b>
+            </div>
+          </div>
+        </section>
+        <section id="settings" class="panel">
+          <h2>Settings</h2>
+          <div class="form-card">
+            <p>
+              Customer website data is stored locally for this demo version.
+            </p>
+            <p>
+              Admin login is intentionally separate from the customer website.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script src="admin.js"></script>
+  </body>
+</html>

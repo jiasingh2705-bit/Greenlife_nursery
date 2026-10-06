@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Plants | GreenLife Nursery</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="category.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="category-header">
+
+        <div class="category-logo">
+            🌿 GreenLife
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="index.html#plants">Plants</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+        <div class="category-cart">
+            🛒 Cart
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH SECTION -->
+
+    <section class="category-hero">
+
+        <div class="category-hero-content">
+
+            <p class="small-title">
+                GREENLIFE NURSERY
+            </p>
+
+            <h1>
+                Search Plants
+            </h1>
+
+            <p>
+                Find plants available in our nursery.
+            </p>
+
+
+            <div class="plant-search">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchPageInput"
+                    placeholder="Search plants..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH RESULTS -->
+
+    <main class="plants-container">
+
+        <div class="plants-top">
+
+            <h2 id="searchHeading">
+                Search Results
+            </h2>
+
+            <span id="searchCount">
+                0 plants
+            </span>
+
+        </div>
+
+
+        <div
+            id="searchResults"
+            class="plants-grid">
+        </div>
+
+
+        <!-- NO RESULT -->
+
+        <div
+            id="noSearchResults"
+            class="no-plants"
+            style="display:none;">
+
+            <h3>No exact plant found 🌱</h3>
+
+            <p>
+                Don't worry! Here are some plants
+                you may like from our nursery.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+    <script src="search.js"></script>
+
+</body>
+
+</html>

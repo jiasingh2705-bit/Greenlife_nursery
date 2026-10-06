@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Admin Login | GreenLife</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-login">
+    <div class="login-card">
+      <div class="admin-logo">🌿 GreenLife <small>ADMIN PANEL</small></div>
+      <h2>Admin Login</h2>
+      <p>Private management area</p>
+      <form id="adminLogin">
+        <input
+          id="adminEmail"
+          type="email"
+          placeholder="Admin email"
+          required
+        /><input
+          id="adminPass"
+          type="password"
+          placeholder="Password"
+          required
+        /><button>Login to Admin</button>
+      </form>
+      <div id="adminMsg"></div>
+      <a href="index.html">← Back to customer website</a>
+      <div class="demo">Demo: admin@greenlife.com / admin123</div>
+    </div>
+    <script>
+      document.getElementById("adminLogin").onsubmit = (e) => {
+        e.preventDefault();
+        if (
+          document.getElementById("adminEmail").value ===
+            "admin@greenlife.com" &&
+          document.getElementById("adminPass").value === "admin123"
+        ) {
+          localStorage.setItem("greenlifeAdmin", "true");
+          location.href = "admin.html";
+        } else
+          document.getElementById("adminMsg").textContent =
+            "Wrong admin credentials";
+      };
+    </script>
+  </body>
+</html>

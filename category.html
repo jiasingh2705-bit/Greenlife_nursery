@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plants | GreenLife Nursery</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="category.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="category-header">
+        <div class="category-logo">
+            🌿 GreenLife
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="category-cart">
+            🛒 Cart
+        </div>
+    </header>
+
+
+    <!-- Category Hero -->
+    <section class="category-hero">
+
+        <div class="category-hero-content">
+
+            <p class="small-title">GREENLIFE NURSERY</p>
+
+            <h1 id="categoryTitle">Plants</h1>
+
+            <p id="categoryDescription">
+                Discover beautiful plants for your home and garden.
+            </p>
+
+            <!-- Search -->
+            <div class="plant-search">
+                <span>🔍</span>
+                <input
+                    type="text"
+                    id="plantSearch"
+                    placeholder="Search plants..."
+                >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Plants -->
+    <main class="plants-container">
+
+        <div class="plants-top">
+
+            <h2 id="categoryHeading">
+                Popular Plants
+            </h2>
+
+            <span id="plantCount"></span>
+
+        </div>
+
+        <div id="plantsGrid" class="plants-grid">
+            <!-- Plants will appear here -->
+        </div>
+
+        <div id="noPlants" class="no-plants">
+            No plants found 🌱
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+    <script src="category.js"></script>
+
+</body>
+</html>

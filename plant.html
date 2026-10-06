@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plant Details | GreenLife Nursery</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plant.css">
+</head>
+
+<body class="plant-details-page">
+
+    <!-- HEADER -->
+    <header class="plant-header">
+
+        <a href="index.html" class="plant-logo">
+            🌿 <b>GreenLife</b>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="index.html#plants">Plants</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+        <button class="plant-cart" onclick="openCart()">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- PLANT DETAILS -->
+    <main class="plant-details-container">
+
+        <div id="plantDetails">
+
+            <!-- JavaScript will load the plant here -->
+
+        </div>
+
+    </main>
+
+
+    <!-- CART PANEL -->
+    <div id="cartPanel" class="cart-panel">
+
+        <div class="cart-head">
+            <h3>Your Cart</h3>
+            <button onclick="closeCart()">×</button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+            Total
+            <strong id="cartTotal">₹0</strong>
+        </div>
+
+        <button class="btn primary full" onclick="checkout()">
+            Proceed to Checkout
+        </button>
+
+    </div>
+
+
+    <div id="toast" class="toast"></div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    <script src="plant.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+/* =========================
+   PLANT DETAILS PAGE
+========================= */
+
+.plant-details-page {
+    background: #f7f6ee;
+    color: #24352d;
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+.plant-header {
+    min-height: 74px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-bottom: 1px solid #e6ebe5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.plant-logo {
+    text-decoration: none;
+    color: #145b3a;
+    font-size: 21px;
+}
+
+.plant-header nav {
+    display: flex;
+    gap: 28px;
+}
+
+.plant-header nav a {
+    text-decoration: none;
+    color: #24352d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.plant-header nav a:hover {
+    color: #145b3a;
+}
+
+.plant-cart {
+    border: none;
+    background: #145b3a;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* MAIN */
+
+.plant-details-container {
+    max-width: 1180px;
+    margin: auto;
+    padding: 35px 20px 70px;
+}
+
+
+/* BREADCRUMB */
+
+.plant-breadcrumb {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #718078;
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+
+.plant-breadcrumb a {
+    color: #145b3a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* DETAIL CARD */
+
+.plant-detail-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    box-shadow: 0 8px 30px rgba(18,53,42,0.08);
+}
+
+
+/* IMAGE */
+
+.plant-detail-image {
+    min-height: 480px;
+    background: #eef4e9;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plant-detail-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: cover;
+}
+
+.no-image {
+    font-size: 100px;
+}
+
+
+/* INFORMATION */
+
+.plant-detail-info {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-badge {
+    display: inline-block;
+    width: fit-content;
+    background: #f6edcf;
+    color: #876b16;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.detail-category {
+    color: #145b3a;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+}
+
+.plant-detail-info h1 {
+    font-size: 40px;
+    margin: 0 0 12px;
+    color: #12352a;
+}
+
+.detail-rating {
+    color: #d6a84f;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.detail-rating span {
+    color: #718078;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.detail-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #145b3a;
+    margin-bottom: 10px;
+}
+
+.detail-stock {
+    color: #24734e;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.plant-description {
+    border-top: 1px solid #e7ebe6;
+    border-bottom: 1px solid #e7ebe6;
+    padding: 20px 0;
+    margin-bottom: 22px;
+}
+
+.plant-description h3 {
+    margin: 0 0 8px;
+    color: #12352a;
+}
+
+.plant-description p {
+    margin: 0;
+    color: #718078;
+    line-height: 1.7;
+}
+
+
+/* BUTTONS */
+
+.plant-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.detail-cart-btn {
+    border: none;
+    background: #145b3a;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.detail-cart-btn:hover {
+    background: #12352a;
+}
+
+.detail-cart-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+.continue-btn {
+    border: 1px solid #145b3a;
+    background: white;
+    color: #145b3a;
+    padding: 14px 20px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* BENEFITS */
+
+.plant-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.plant-benefits > div {
+    background: #f7f8f3;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.plant-benefits span {
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-benefits b {
+    font-size: 11px;
+}
+
+.plant-benefits small {
+    color: #718078;
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+
+/* NOT FOUND */
+
+.plant-not-found {
+    text-align: center;
+    background: white;
+    padding: 80px 20px;
+    border-radius: 20px;
+}
+
+.not-found-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.plant-not-found h2 {
+    color: #12352a;
+}
+
+.plant-not-found p {
+    color: #718078;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    background: #145b3a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .plant-header {
+        padding: 12px 20px;
+    }
+
+    .plant-header nav {
+        display: none;
+    }
+
+    .plant-detail-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 18px;
+    }
+
+    .plant-detail-image,
+    .plant-detail-image img {
+        min-height: 330px;
+    }
+
+    .plant-detail-info h1 {
+        font-size: 30px;
+    }
+
+    .plant-benefits {
+        grid-template-columns: 1fr;
+    }
+
+}
+.notify-btn {
+    border: 1px solid #145b3a;
+    background: white;
+    color: #145b3a;
+    padding: 14px 25px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.notify-btn:hover {
+    background: #145b3a;
+    color: white;
+}
